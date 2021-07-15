@@ -2,13 +2,16 @@
   "name": "restaurant-apps",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "http://abtempts.github.io/restaurant-apps",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js --inline=false",
     "build": "webpack --config webpack.prod.js --inline=false",
     "build-image": "node sharp.js",
     "test": "karma start",
     "lint": "eslint ./src",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
