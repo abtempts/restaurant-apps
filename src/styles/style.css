@@ -1,0 +1,320 @@
+html, body, main {
+    width: 100%;
+}
+
+body {
+    background-color: whitesmoke;;
+    padding: 0;
+    margin: 0;
+}
+#hamburgerButton{
+    display: block;
+}
+
+button.button {
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #022E57;
+}
+
+img {
+    display: block;
+}
+
+.app-bar {
+    display: flex;
+}
+
+#logo{
+    font-size:24px;
+    color:#022E57;
+}
+#title{
+    font-family: sans-serif;
+    font-size:24px;
+    color:#022E57;
+}
+.app-bar__brand {
+    text-align:left;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+}
+  
+/*
+ * Jumbotron
+ */
+
+.hero {
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("/images/heros/hero-image_1-large.jpg");
+    background-color: whitesmoke;
+    background-position: top;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    font-family: sans-serif;
+    color: #022E57;
+    font-size: 36px;
+    font-weight: bolder;
+    background-color: greenyellow;
+    padding: 12px;
+}
+
+.hero__tagline {
+    font-family: sans-serif;
+    color: #022E57;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: yellowgreen;
+
+}
+
+.restaurant_card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 35px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .restaurant_card .restaurant_img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .restaurant_card .restaurant_img img {
+    width: inherit;
+    height: inherit;
+    border-radius: 35px;
+    object-fit: cover;
+  }
+  
+  .restaurant_card .restaurant_name {
+    text-align: center;
+    border-radius: 0px 0px 35px 35px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: -80px;
+    height: 40px;
+    text-decoration-color: whitesmoke;;
+  }
+  
+
+  .restaurant_card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+
+  #restaurant_desc{
+      display: none;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgba(0,0,0,0.25); /* If you want dots under the hoverable text */
+  }
+  
+  .restaurant_card #restaurant_desc {
+    display: none;
+    width: 300px;
+    background-color: rgba(0,0,0,0.25);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .restaurant_card:hover #restaurant_desc{
+    display: block;
+    line-height: 1.5;
+    font-size: large;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    
+  }
+
+  span#logo:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 25px 15px rgba(0,0,0,0.25), 
+      -5px -5px 25px 15px rgba(0,0,0,0.25);
+  }
+  .restaurants{
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .restaurant_card p {
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  .restaurant_name {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+.list-title{
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    width:100%;
+    /* position:fixed; */
+    margin:auto;
+    bottom: 0px;
+}
+
+.footerContent {
+    grid-column:left;
+    width:100%;
+    background-color:greenyellow;
+    padding:20px 0;
+}
+#footer p {grid-column:left; width:100%; text-align:center; }
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: magenta;
+    color: cyan;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+#hamburgerButton {
+    width: 45px;
+    font-size: 45px;
+    width: 45px;
+    text-decoration: none;
+    border: none;
+    color: black;
+    background-color: Transparent;
+    cursor:pointer;
+}
+
+.content__heading {
+    text-align: center;
+}
+
+/*
+   Like
+*/
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 70px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant__name{
+    font-size: 24px;
+}
+
+
+table.menu {
+    table-layout: auto;
+    width: 100%;
+    
+}
+
+table td, table td * {
+    vertical-align: top;
+    font-size: 14px;
+}
+
+ul {list-style: none;}
+
+#detail__img{
+    align-items: center;
+}
+
+#detail_img {
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;  
+    object-fit: cover;
+}
+
+.restaurant_detail {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.remarks {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.detail_desc {
+    font-size: 12px;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_review {
+    padding: 0 10px 10px 0;
+}

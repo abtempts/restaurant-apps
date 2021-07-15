@@ -1,0 +1,167 @@
+/* minimal layar ukuran sedang */
+@media only screen and (min-width: 480px) {
+
+    #hamburgerButton{
+        display: block;
+    }
+
+    #navigationDrawer {
+        display: block;
+        position: fixed;
+        transform: translate(-250px, 0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #navbar{
+        display: none;
+    }
+    button.button {
+        display: none;
+    }
+    
+    body {
+        background-color: whitesmoke;;
+    }
+    
+    #footer {
+        width:100%;
+        margin:auto;
+    }
+    
+}
+
+/* minimal layar ukuran besar */
+@media only screen and (min-width: 768px) {
+
+    #hamburgerButton{
+        display: none;
+    }
+    
+    #navigationDrawer.open {
+        transform: translate(0, 0);
+    }
+
+    #navigationDrawer{
+        display: none;
+    }
+    #navbar{
+        display: inline-block;
+    }
+    button.button {
+        display: block;
+    }
+    
+    #navbar  {
+        text-align:center;
+        font-size: 18px;
+    }
+    
+    
+    #navbar a:link {
+        color: #005A8D
+    }
+      
+    #navbar a:visited {
+        color: #005A8D;
+    }
+      
+    #navbar a:hover {
+        color: blue;
+    }
+      
+    #navbar a:active {
+        color: gray;
+    }
+    
+    .button {
+        box-sizing: border-box;
+    }
+    .button {
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        width: 100px;
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+    
+    span#text-home, span#text-favorite, span#text-about {
+        display: none;
+    }
+    
+    button.button:hover span#text-home {
+        font-weight: 8px;
+        display: block;
+    }
+    
+    button.button:hover span#text-favorite {
+        font-weight: 8px;
+        display: block;
+    }
+    
+    button.button:hover span#text-about {
+        font-weight: 8px;
+        display: block;
+    }
+    
+    body {
+        background-color: whitesmoke;
+    }
+    h1 {
+        text-align: center;
+    }
+    
+    span#logo{
+        font-size:52px;
+        color:#022E57;
+    }
+    span#title{
+        font-size:52px;
+        color:#022E57;
+    }
+    .app-bar__brand {
+        width: 70%;
+        text-align:left;
+        margin: 0.5em 0.25em;
+        display: inline-block;
+    }
+    .nav-bar {
+        width: 30%;
+        margin: 0.5em 0.25em;
+        text-align:center;
+        font-size: 18px;
+    }
+    nav ul{
+    
+        outline: none;
+        border: 0;
+    }
+    li {
+        display: inline-block;
+    }
+    
+    .list-title{
+        text-align: center;
+    }
+
+    #footer {
+        width: 100%;
+        margin:auto;
+    }
+}
+
