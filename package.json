@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --inline=false",
-    "build": "webpack --config webpack.prod.js --inline=false",
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "build-image": "node sharp.js",
     "test": "karma start",
     "lint": "eslint ./src",
