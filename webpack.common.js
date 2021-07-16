@@ -13,7 +13,7 @@ const delimiter = '~';
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
-    path: path.resolve(__dirname, '/'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
   },
   optimization: {
@@ -65,7 +65,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, '/'),
+          to: path.resolve(__dirname, 'dist/'),
           // globOptions: {
           // eslint-disable-next-line max-len
           //   ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
