@@ -2,7 +2,6 @@
   "name": "restaurant-apps",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "http://abtempts.github.io/restaurant-apps",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js --inline=false",
     "build": "webpack --config webpack.prod.js --inline=false",
@@ -10,8 +9,7 @@
     "test": "karma start",
     "lint": "eslint ./src",
     "e2e": "codeceptjs run --steps",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
@@ -50,6 +48,7 @@
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "idb": "^6.1.2",
     "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.7",

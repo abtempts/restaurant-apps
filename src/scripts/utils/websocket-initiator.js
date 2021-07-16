@@ -1,3 +1,5 @@
+import NotifHelper from './notif-helper';
+
 const WebSocketInitiator = {
   init(url) {
     const webSocket = new WebSocket(url);
