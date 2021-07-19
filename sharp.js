@@ -3,7 +3,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const target = path.resolve(__dirname, 'src/public/images');
+const target = path.resolve(__dirname, 'src/public/images/heros');
 const destination = path.resolve(__dirname, 'dist/images');
 
 if (!fs.existsSync(destination)) {
@@ -12,12 +12,25 @@ if (!fs.existsSync(destination)) {
 
 fs.readdirSync(target)
   .forEach((image) => {
-    // mengubah ukuran gambar dengan lebar 800px, dengan prefix -large.jpg
+    // mengubah ukuran gambar dengan lebar 180px, dengan prefix -large.jpg
     sharp(`${target}/${image}`)
-      .resize(800)
+      .resize(1350)
+      .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
+        .slice(0, -1)
+        .join('.')}-extralarge.jpg`));
+
+    sharp(`${target}/${image}`)
+      .resize(1080)
       .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
         .slice(0, -1)
         .join('.')}-large.jpg`));
+
+    // mengubah ukuran gambar dengan lebar 800px, dengan prefix -medium.jpg
+    sharp(`${target}/${image}`)
+      .resize(720)
+      .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
+        .slice(0, -1)
+        .join('.')}-medium.jpg`));
 
     // mengubah ukuran gambar dengan lebar 480px, dengan prefix -small.jpg
     sharp(`${target}/${image}`)

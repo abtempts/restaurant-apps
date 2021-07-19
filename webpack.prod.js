@@ -20,9 +20,4 @@ module.exports = merge(common, {
       },
     ],
   },
-  output: {
-    // Tweak this to match your GitHub project name
-    publicPath: '/restaurant-apps/',
-
-  },
 });

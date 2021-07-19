@@ -5,7 +5,7 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // installed via npm
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // installed via npm
 const webpack = require('webpack'); // to access built-in plugins
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -66,10 +66,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
-          // globOptions: {
+          globOptions: {
           // eslint-disable-next-line max-len
-          //   ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
-          // },
+            ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+          },
         },
       ],
     }),
@@ -85,7 +85,7 @@ module.exports = {
       ],
     }),
     new webpack.ProgressPlugin(),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({ template: './src/templates/index.html' }),
     new BundleAnalyzerPlugin(),
   ],

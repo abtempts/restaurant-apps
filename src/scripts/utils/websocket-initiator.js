@@ -11,7 +11,7 @@ const WebSocketInitiator = {
       title: 'Notification from WebSocket',
       options: {
         body: message.data,
-        icon: 'icon/ico-128.png',
+        icon: 'images/icon/ico-128.png',
         image: 'https://source.unsplash.com/random/800x600',
         vibrate: [100, 50, 100],
       },

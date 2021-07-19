@@ -21,12 +21,6 @@ button.button {
     box-sizing: border-box;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
 body {
     font-family: sans-serif;
     font-size: 12px;
@@ -61,6 +55,17 @@ img {
  */
 
 .hero {
+    background-image: url("/images/hero-image-small.jpg");
+    background-image: 
+    -webkit-image-set(
+        "/images/hero-image-small.jpg" 1x,
+        "/images/hero-image-medium.jpg" 2x,
+    );
+  background-image: 
+    image-set(
+        "/images/hero-image-small.jpg" 1x,
+        "/images/hero-image-medium.jpg" 2x,
+    );
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -68,9 +73,23 @@ img {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    background-image: url("/images/heros/hero-image_1-large.jpg");
     background-color: whitesmoke;
-    background-position: top;
+}
+@media only screen and (min-width: 800px){
+    .hero {
+        background-image: url("/images/hero-image-large.jpg");
+        background-image: 
+            -webkit-image-set(
+                "/images/hero-image-large.jpg" 1x,
+                "/images/hero-extralarge.jpg" 2x,
+            );
+        background-image: 
+            image-set(
+                "/images/hero-image-large.jpg" 1x,
+                "/images/hero-extralarge.jpg" 2x,
+            );
+        background-position: center top;
+    }
 }
 
 .hero__inner {
