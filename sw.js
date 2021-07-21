@@ -19,8 +19,10 @@
 // self.addEventListener('install', (event) => {
 //   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 // });
-const cacheName = 'restaurant-apps-v1';
-const filesToCache = [
+const version = '1.0.0';
+const CACHE_NAME = `restaurant-apps-${version}`;
+const assetsToCache = [
+  '/',
   '/dist/defaultVendors~main~678f84af.bundle.js',
   '/dist/defaultVendors~main~d939e436.bundle.js',
   '/dist/main~29d6ecf2.bundle.js',
@@ -36,52 +38,62 @@ const filesToCache = [
   '/index.html',
 ];
 
-self.addEventListener('install', (e) => {
-  console.log('install');
-  e.waitUntil(
-    caches.open(cacheName).then((cache) => {
-      console.log('caching app shell...(/)');
-      return cache.addAll(filesToCache);
-    }),
+self.addEventListener('install', (event) => {
+  console.log('Installing service worker....');
+
+  // menyimpan appshell ke caches API
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => caches.addAll(assetsToCache)),
   );
 });
 
-// self.addEventListener('activate', (event) => {
-//   event.waitUntil(CacheHelper.deleteOldCache());
+// self.addEventListener('install', (e) => {
+//   console.log('install');
+//   e.waitUntil(
+//     caches.open(cacheName).then((cache) => {
+//       console.log('caching app shell...(/)');
+//       return cache.addAll(filesToCache);
+//     }),
+//   );
 // });
 
-self.addEventListener('activate', (e) => {
-  console.log('activate');
-  e.waitUntil(
-    caches.keys().then((keyList) => Promise.all(keyList.map((key) => {
-      if (key !== cacheName) {
-        console.log('removing old cache...', key);
-        return caches.delete(key);
-      }
-    }))),
-  );
-  return self.clients.claim();
-});
+// // self.addEventListener('activate', (event) => {
+// //   event.waitUntil(CacheHelper.deleteOldCache());
+// // });
 
-// self.addEventListener('fetch', (event) => {
-//   // service worker bisa menampilkan, bahkan memanipulasi request yang dilakukan client
-//   console.log(event.request);
-//   // self.addEventListener('fetch', (event) => {
-//   event.respondWith(CacheHelper.revalidateCache(event.request));
+// self.addEventListener('activate', (e) => {
+//   console.log('activate');
+//   e.waitUntil(
+//     caches.keys().then((keyList) => Promise.all(keyList.map((key) => {
+//       if (key !== cacheName) {
+//         console.log('removing old cache...', key);
+//         return caches.delete(key);
+//       }
+//     }))),
+//   );
+//   return self.clients.claim();
 // });
 
-self.addEventListener('fetch', (e) => {
-  console.log('fetch', e.request.url);
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      if (response) {
-        console.log('retrieving from cache...');
-        return response;
-      }
-      console.log('retrieving from URL...');
-      return fetch(e.request).catch((e) => {
-        console.log('fetch request failed!');
-      });
-    }),
-  );
-});
+// // self.addEventListener('fetch', (event) => {
+// //   // service worker bisa menampilkan, bahkan memanipulasi request yang dilakukan client
+// //   console.log(event.request);
+// //   // self.addEventListener('fetch', (event) => {
+// //   event.respondWith(CacheHelper.revalidateCache(event.request));
+// // });
+
+// self.addEventListener('fetch', (e) => {
+//   console.log('fetch', e.request.url);
+//   e.respondWith(
+//     caches.match(e.request).then((response) => {
+//       if (response) {
+//         console.log('retrieving from cache...');
+//         return response;
+//       }
+//       console.log('retrieving from URL...');
+//       return fetch(e.request).catch((e) => {
+//         console.log('fetch request failed!');
+//       });
+//     }),
+//   );
+// });
