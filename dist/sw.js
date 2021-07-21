@@ -1,18 +1,18 @@
 var serviceWorkerOption = {
   "assets": [
-    "/defaultVendors~main~678f84af.bundle.js",
-    "/defaultVendors~main~d939e436.bundle.js",
-    "/main~29d6ecf2.bundle.js",
-    "/manifest.json",
-    "/icons/ico-128.png",
-    "/icons/ico-256.png",
-    "/icons/ico-32.png",
-    "/icons/ico-48.png",
-    "/icons/ico-512.png",
-    "/icons/ico-64.png",
-    "/icons/ico-72.png",
-    "/icons/ico-96.png",
-    "/index.html"
+    "restaurant-apps/dist/defaultVendors~main~678f84af.bundle.js",
+    "restaurant-apps/dist/defaultVendors~main~d939e436.bundle.js",
+    "restaurant-apps/dist/main~29d6ecf2.bundle.js",
+    "restaurant-apps/dist/manifest.json",
+    "restaurant-apps/dist/icons/ico-128.png",
+    "restaurant-apps/dist/icons/ico-256.png",
+    "restaurant-apps/dist/icons/ico-32.png",
+    "restaurant-apps/dist/icons/ico-48.png",
+    "restaurant-apps/dist/icons/ico-512.png",
+    "restaurant-apps/dist/icons/ico-64.png",
+    "restaurant-apps/dist/icons/ico-72.png",
+    "restaurant-apps/dist/icons/ico-96.png",
+    "restaurant-apps/index.html"
   ]
 };
         
