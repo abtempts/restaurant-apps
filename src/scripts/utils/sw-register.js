@@ -3,7 +3,7 @@
 const swRegister = async () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('./sw.js')
+      .register('./dist/sw.js')
       .then(() => { console.log('Registered service worker!'); });
     return;
   }
