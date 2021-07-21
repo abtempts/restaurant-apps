@@ -8,19 +8,20 @@
 
 // const { assets } = global.serviceWorkerOption;
 
-// try {
-//   navigator.serviceWorker
-//     .register('./dist/sw.js')
-//     .then(() => { console.log('Registered service worker!'); });
-// } catch (error) {
-//   console.log('Failed to register service worker', error);
-// }
+try {
+  navigator.serviceWorker
+    .register('./dist/sw.js')
+    .then(() => { console.log('Registered service worker!-2'); });
+} catch (error) {
+  console.log('Failed to register service worker', error);
+}
 
 // self.addEventListener('install', (event) => {
 //   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 // });
 const cacheName = 'restaurant-apps-v1';
 const filesToCache = [
+  './',
   '/dist/defaultVendors~main~678f84af.bundle.js',
   '/dist/defaultVendors~main~d939e436.bundle.js',
   '/dist/main~29d6ecf2.bundle.js',
