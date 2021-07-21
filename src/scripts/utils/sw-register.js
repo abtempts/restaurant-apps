@@ -1,10 +1,10 @@
-// import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
 const swRegister = async () => {
   if ('serviceWorker' in navigator) {
-    // await runtime.register('/dist/sw.js');
+    runtime.register('/dist/sw.js');
     console.log('sw-register.js breakpoint1');
-    navigator.serviceWorker.register('restaurant-apps/dist/sw.js');
+    navigator.serviceWorker.register('dist/sw.js');
     console.log('sw-register.js breakpoint2');
     return;
   }
