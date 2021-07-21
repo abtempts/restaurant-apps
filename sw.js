@@ -50,18 +50,19 @@ this.addEventListener('install', function(event) {
         '/dist/defaultVendors~main~d939e436.bundle.js',
         '/dist/main~29d6ecf2.bundle.js',
         '/dist/manifest.json',
-        '/dist/icons/ico-128.png',
-        '/dist/icons/ico-256.png',
-        '/dist/icons/ico-32.png',
-        '/dist/icons/ico-48.png',
-        '/dist/icons/ico-512.png',
-        '/dist/icons/ico-64.png',
-        '/dist/icons/ico-72.png',
-        '/dist/icons/ico-96.png',
-        '/index.html']);
-      })
-    );
-  });
+        // '/dist/icons/ico-128.png',
+        // '/dist/icons/ico-256.png',
+        // '/dist/icons/ico-32.png',
+        // '/dist/icons/ico-48.png',
+        // '/dist/icons/ico-512.png',
+        // '/dist/icons/ico-64.png',
+        // '/dist/icons/ico-72.png',
+        // '/dist/icons/ico-96.png',
+        // '/index.html'
+      ]);
+    }),
+  );
+});
 
 // self.addEventListener('install', (e) => {
 //   console.log('install');
