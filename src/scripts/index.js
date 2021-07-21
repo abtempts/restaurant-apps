@@ -27,13 +27,6 @@ window.addEventListener('load', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   app.renderPage();
-  // swRegister();
-  try {
-    navigator.serviceWorker
-      .register('./dist/sw.js')
-      .then(() => { console.log('Registered service worker!'); });
-  } catch (error) {
-    console.log('Failed to register service worker', error);
-  }
+  swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
