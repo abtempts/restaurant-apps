@@ -1,5 +1,7 @@
 import CONFIG from '../globals/config';
 
+console.log(`global.serviceWorkerOption: ${global.serviceWorkerOption}`);
+
 const CacheHelper = {
   async cachingAppShell(requests) {
     console.log(`cache-helper.js cachingAppShell(requests); breakpoint1: ${requests}`);
