@@ -2,8 +2,9 @@
 
 const swRegister = async () => {
   if ('serviceWorker' in navigator) {
-    // runtime.register();
-    // navigator.serviceWorker.register('dist/sw.js');
+    navigator.serviceWorker
+      .register('./sw.js')
+      .then(() => { console.log('Registered service worker!'); });
     return;
   }
   console.log('Service worker not supported in this browser');

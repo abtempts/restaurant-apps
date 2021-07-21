@@ -6,7 +6,7 @@
 // import 'regenerator-runtime';
 // import CacheHelper from './utils/cache-helper';
 
-const { assets } = global.serviceWorkerOption;
+// const { assets } = global.serviceWorkerOption;
 
 try {
   // navigator.serviceWorker.register('/restaurant-apps/dist/sw.js');
