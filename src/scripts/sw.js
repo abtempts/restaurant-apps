@@ -4,6 +4,13 @@ import CacheHelper from './utils/cache-helper';
 
 const { assets } = global.serviceWorkerOption;
 
+try {
+  navigator.serviceWorker.register('./restaurant-apps/sw.js');
+  console.log('Service worker registered');
+} catch (error) {
+  console.log('Failed to register service worker', error);
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 });
@@ -13,5 +20,8 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // service worker bisa menampilkan, bahkan memanipulasi request yang dilakukan client
+  console.log(event.request);
+  // self.addEventListener('fetch', (event) => {
   event.respondWith(CacheHelper.revalidateCache(event.request));
 });
