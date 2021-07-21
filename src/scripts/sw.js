@@ -9,8 +9,9 @@
 // const { assets } = global.serviceWorkerOption;
 
 try {
-  // navigator.serviceWorker.register('/restaurant-apps/dist/sw.js');
-  console.log('Service worker registered');
+  navigator.serviceWorker
+    .register('./dist/sw.js')
+    .then(() => { console.log('Registered service worker!'); });
 } catch (error) {
   console.log('Failed to register service worker', error);
 }

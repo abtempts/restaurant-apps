@@ -25,6 +25,6 @@ window.addEventListener('load', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   app.renderPage();
-  swRegister();
+  // swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
