@@ -11,7 +11,7 @@
 try {
   navigator.serviceWorker
     .register('./dist/sw.js')
-    .then(() => { console.log('Registered service worker!-2'); });
+    .then(() => { console.log('Registered service worker!'); });
 } catch (error) {
   console.log('Failed to register service worker', error);
 }

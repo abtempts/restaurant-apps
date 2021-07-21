@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+// const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
@@ -73,9 +73,9 @@ module.exports = {
         },
       ],
     }),
-    new ServiceWorkerWebpackPlugin({
-      entry: path.resolve(__dirname, 'src/scripts/sw.js'),
-    }),
+    // new ServiceWorkerWebpackPlugin({
+    //   entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    // }),
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
