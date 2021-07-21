@@ -2,10 +2,13 @@
                                     you can add the restaurant to your favorite list."><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="preload" as="style" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'"/><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#022E57"/><link rel="apple-touch-icon" href="dist/images/icon/ico-128.png"><title>Gosong Rengat Café</title></head><body>
                                         <script>
                                             if ("serviceWorker" in navigator) {
-                                                console.log('index.html: serviceWorker');
-                                              window.addEventListener("load", function () {
+                                                console.log('index.html: serviceWorker breakpoint1');
+                                                window.addEventListener("load", function () {
                                                 // navigator.serviceWorker.register("/flutter_service_worker.js");
                                                 navigator.serviceWorker.register("/restaurant-apps/sw.js");
+                                                console.log('index.html: serviceWorker breakpoint2');
+                                                navigator.serviceWorker.register("/sw.js");
+                                                console.log('index.html: serviceWorker breakpoint3');
                                               });
                                             }
                                             </script>
