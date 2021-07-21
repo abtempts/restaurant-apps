@@ -55,16 +55,16 @@ img {
  */
 
 .hero {
-    background-image: url("/images/hero-image-small.jpg");
+    background-image: url("/dist/images/hero-image-small.jpg");
     background-image: 
     -webkit-image-set(
-        "/images/hero-image-small.jpg" 1x,
-        "/images/hero-image-medium.jpg" 2x,
+        "/dist/images/hero-image-small.jpg" 1x,
+        "/dist/images/hero-image-medium.jpg" 2x,
     );
   background-image: 
     image-set(
-        "/images/hero-image-small.jpg" 1x,
-        "/images/hero-image-medium.jpg" 2x,
+        "/dist/images/hero-image-small.jpg" 1x,
+        "/dist/images/hero-image-medium.jpg" 2x,
     );
     background-size: cover;
     background-position: center center;
@@ -77,16 +77,16 @@ img {
 }
 @media only screen and (min-width: 800px){
     .hero {
-        background-image: url("/images/hero-image-large.jpg");
+        background-image: url("/dist/images/hero-image-large.jpg");
         background-image: 
             -webkit-image-set(
-                "/images/hero-image-large.jpg" 1x,
-                "/images/hero-extralarge.jpg" 2x,
+                "/dist/images/hero-image-large.jpg" 1x,
+                "/dist/images/hero-extralarge.jpg" 2x,
             );
         background-image: 
             image-set(
-                "/images/hero-image-large.jpg" 1x,
-                "/images/hero-extralarge.jpg" 2x,
+                "/dist/images/hero-image-large.jpg" 1x,
+                "/dist/images/hero-extralarge.jpg" 2x,
             );
         background-position: center top;
     }
