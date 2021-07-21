@@ -6,7 +6,7 @@ const { assets } = global.serviceWorkerOption;
 
 self.addEventListener('install', (event) => {
   console.log('Breakpoint sw.js: install');
-  event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
+  event.waitUntil(CacheHelper.cachingAppShell([...assets, './restaurant-apps/']));
 });
 
 self.addEventListener('activate', (event) => {
