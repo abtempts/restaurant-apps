@@ -3,7 +3,9 @@ import CONFIG from '../globals/config';
 const CacheHelper = {
   async cachingAppShell(requests) {
     const cache = await this._openCache();
+    console.log(`cache-helper.js cache.addAll(requests); breakpoint1: ${requests}`);
     cache.addAll(requests);
+    console.log('cache-helper.js cache.addAll(requests); breakpoint1');
   },
 
   async deleteOldCache() {
@@ -22,6 +24,7 @@ const CacheHelper = {
   },
 
   async _openCache() {
+    console.log(`cache-helper.js caches.open(CONFIG.CACHE_NAME) breakpoint1: ${CONFIG.CACHE_NAME}`);
     return caches.open(CONFIG.CACHE_NAME);
   },
 
