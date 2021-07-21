@@ -18,7 +18,7 @@ try {
 // self.addEventListener('install', (event) => {
 //   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 // });
-
+const cacheName = 'restaurant-apps-v1';
 const filesToCache = [
   '/dist/defaultVendors~main~678f84af.bundle.js',
   '/dist/defaultVendors~main~d939e436.bundle.js',
@@ -38,7 +38,7 @@ const filesToCache = [
 self.addEventListener('install', (e) => {
   console.log('install');
   e.waitUntil(
-    caches.open(CONFIG.CACHE_NAME).then((cache) => {
+    caches.open(cacheName).then((cache) => {
       console.log('caching app shell...');
       return cache.addAll(filesToCache);
     }),
