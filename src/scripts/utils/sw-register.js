@@ -4,7 +4,7 @@ const swRegister = async () => {
   if ('serviceWorker' in navigator) {
     // await runtime.register();
     console.log('sw-register.js breakpoint1');
-    navigator.serviceWorker.register('https://abtempts.github.io/restaurant-apps/dist/sw.js');
+    navigator.serviceWorker.register('/dist/sw.js');
     console.log('sw-register.js breakpoint2');
     return;
   }
