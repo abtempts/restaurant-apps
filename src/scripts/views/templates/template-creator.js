@@ -1,11 +1,11 @@
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (detail) => ` 
+<br/>
   <div class="restaurant_detail">  
     <img id="detail_img" class="lazyload" alt="image ${detail.name}" 
-    data-src="${CONFIG.BASE_IMAGE_URL_L + detail.pictureId}"/> 
-
-
+    data-src="${CONFIG.BASE_IMAGE_URL_L + detail.pictureId}"/>
+    <br/>
   <div class="restaurant__name"><b>${detail.name}</b></div>
   <div class="remarks">
   <span>⭐${detail.rating}</span>
@@ -19,18 +19,20 @@ const createRestaurantDetailTemplate = (detail) => `
   </span>
   &nbsp;•&nbsp;</span><span>${detail.city}</span>&nbsp;•&nbsp;</span><span>${detail.address}</span>
   </div>
-  <p class="detail_desc">${detail.description}</p>
+  <article class="detail_desc">
+    <p>${detail.description}</p>
+  </article>
   <div style="padding-bottom:10px"></div>
   <table class="menu">
     <tr>
     <td>
-    <b>Foods</b>
+    <h3>Foods</h3>
     <ul>
       ${detail.menus.foods.map((food) => `<li>•&nbsp;${food.name}</li>`).join(' ')}
     </ul> 
     </td>
     <td> 
-    <b>Drinks</b>
+    <h3>Drinks</h3>
     <ul>  
       ${detail.menus.drinks.map((drink) => `<li>•&nbsp;${drink.name}</li>`).join(' ')}
     </ul>
@@ -49,7 +51,7 @@ const createRestaurantDetailTemplate = (detail) => `
             <p><i title="restaurant" class="fa fa-user-circle"></i>&nbsp;${review.name}</p>
             <p>${review.date}</p>
           </div>
-          <div>
+          <div class="review-review">
             ${review.review}
           </div>
         </div>
@@ -64,20 +66,22 @@ const createRestaurantDetailTemplate = (detail) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
 
-      <a href="#/detail/${restaurant.id}" style='text-decoration: none;'>
-        <div class="restaurant_card">
-          <div class="restaurant_img">  
-            <img id="detail__img" class="lazyload" 
-            alt="image ${restaurant.name}" 
-            src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/> 
-          </div>
-          <div class="restaurant_name">
-            ${restaurant.name}
-          </div>
-          <p>${restaurant.city} <i class="fa fa-star" aria-hidden="true"></i> ${restaurant.rating}</p>
-          <span id="restaurant_desc">${restaurant.description}</span>
+      
+        <div class="restaurant_card" onclick="window.location.assign('#/detail/${restaurant.id}')">
+        
+        <div class="restaurant_img">
+          
+          <img id="detail__img" class="lazyload lazysizes" 
+          alt="image ${restaurant.name}" 
+          data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
+          />
         </div>
-      </a>
+        <div class="restaurant_name">
+          ${restaurant.name}
+        </div>
+        <p>${restaurant.city} <i class="fa fa-star" aria-hidden="true"></i> ${restaurant.rating}</p>
+        <span id="restaurant_desc">${restaurant.description}</span>
+        </div>
   `;
 
 const createLikeButtonTemplate = () => `

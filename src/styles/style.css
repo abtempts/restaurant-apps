@@ -142,7 +142,7 @@ img {
   .restaurant_card .restaurant_name {
     text-align: center;
     border-radius: 0px 0px 35px 35px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 24px;
     margin-top: -80px;
@@ -292,12 +292,21 @@ footer {
 table.menu {
     table-layout: auto;
     width: 100%;
-    
+    max-width: 75ex;
+    padding-top: 15px;
+}
+
+.menu tr td ul {
+    font-size: 12px;
+    margin: 0.5em 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: calc(1.4 + var(--space) / 100);
+    letter-spacing: calc(1em * (var(--space) / 200));
+    word-spacing: calc(1em * (var(--space) / 100));
 }
 
 table td, table td * {
     vertical-align: top;
-    font-size: 14px;
 }
 
 ul {list-style: none;}
@@ -327,11 +336,28 @@ ul {list-style: none;}
 }
 
 .detail_desc {
-    font-size: 12px;
+    max-width: 800px;
+    font-size: calc(.35842vw + .95296em);
+    margin: 1em 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.detail_desc p {
+    line-height: calc(1.4 + var(--space) / 100);
+    letter-spacing: calc(1em * (var(--space) / 200));
+    word-spacing: calc(1em * (var(--space) / 100));
+    font-family: Arial, Helvetica, sans-serif;
 }
 .review {
     display: flex;
     flex-direction: column;
+    margin: 0.5em 0 0 0;
+}
+.review-review{
+    line-height: calc(1.4 + var(--space) / 100);
+    letter-spacing: calc(1em * (var(--space) / 200));
+    word-spacing: calc(1em * (var(--space) / 100));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
 }
 
 .detail_review {
