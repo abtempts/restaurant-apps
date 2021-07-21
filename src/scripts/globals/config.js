@@ -9,5 +9,6 @@ const CONFIG = {
   DATABASE_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurants',
   WEB_SOCKET_SERVER: 'wss://javascript.info/article/websocket/chat/ws',
+  CACHE_NAME: 'restaurant-apps-v1',
 };
 export default CONFIG;
