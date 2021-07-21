@@ -9,6 +9,7 @@ const CacheHelper = {
   },
 
   async deleteOldCache() {
+    console.log('cache-helper.js: deleteOldCache');
     const cacheNames = await caches.keys();
     cacheNames
       .filter((name) => name !== CONFIG.CACHE_NAME)
@@ -16,6 +17,7 @@ const CacheHelper = {
   },
 
   async revalidateCache(request) {
+    console.log(`cache-helper.js: revalidateCache request: ${request}`);
     const response = await caches.match(request);
     if (response) {
       return response;
@@ -29,9 +31,11 @@ const CacheHelper = {
   },
 
   async _fetchRequest(request) {
+    console.log(`cache-helper.js: _fetchRequest request: ${request}`);
     const response = await fetch(request);
 
     if (!response || response.status !== 200) {
+      console.log(`cache-helper.js: if (!response || response.status !== 200): ${response}`);
       return response;
     }
 
@@ -41,6 +45,7 @@ const CacheHelper = {
 
   async _addCache(request) {
     const cache = await this._openCache();
+    console.log(`cache-helper.js: _addCache request: ${request}`);
     cache.add(request);
   },
 };
