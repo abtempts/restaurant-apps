@@ -1,9 +1,10 @@
+/* eslint-disable import/extensions */
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-restricted-globals */
-import 'regenerator-runtime';
-import CacheHelper from './utils/cache-helper';
+// import 'regenerator-runtime';
+// import CacheHelper from './utils/cache-helper';
 
 const { assets } = global.serviceWorkerOption;
 
@@ -14,9 +15,9 @@ try {
   console.log('Failed to register service worker', error);
 }
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
-});
+// self.addEventListener('install', (event) => {
+//   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
+// });
 
 const filesToCache = [
   '/dist/defaultVendors~main~678f84af.bundle.js',
@@ -37,7 +38,7 @@ const filesToCache = [
 self.addEventListener('install', (e) => {
   console.log('install');
   e.waitUntil(
-    caches.open(cacheName).then((cache) => {
+    caches.open(CONFIG.CACHE_NAME).then((cache) => {
       console.log('caching app shell...');
       return cache.addAll(filesToCache);
     }),
