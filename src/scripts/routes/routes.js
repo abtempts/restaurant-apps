@@ -3,7 +3,7 @@ import Favorite from '../views/pages/favorite';
 import Detail from '../views/pages/detail';
 
 const routes = {
-  '/': NowOpen, // default page
+  '/restaurant-apps/': NowOpen, // default page
   '/favorite': Favorite,
   '/detail/:id': Detail,
 };
