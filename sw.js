@@ -1,3 +1,6 @@
+/* eslint-disable func-names */
+/* eslint-disable space-before-function-paren */
+/* eslint-disable prefer-arrow-callback */
 /* eslint-disable import/extensions */
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-vars */
@@ -38,13 +41,10 @@ const assetsToCache = [
   '/index.html',
 ];
 
-self.addEventListener('install', (event) => {
-  console.log('Installing service worker....');
-
-  // menyimpan appshell ke caches API
+this.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll([
+    caches.open(CACHE_NAME).then(function(cache) {
+      return cache.addAll([
         '/',
         '/dist/defaultVendors~main~678f84af.bundle.js',
         '/dist/defaultVendors~main~d939e436.bundle.js',
@@ -58,9 +58,10 @@ self.addEventListener('install', (event) => {
         '/dist/icons/ico-64.png',
         '/dist/icons/ico-72.png',
         '/dist/icons/ico-96.png',
-        '/index.html'])),
-  );
-});
+        '/index.html']);
+      })
+    );
+  });
 
 // self.addEventListener('install', (e) => {
 //   console.log('install');
