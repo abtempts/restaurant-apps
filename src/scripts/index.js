@@ -28,3 +28,10 @@ window.addEventListener('DOMContentLoaded', () => {
   swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
+
+navigator.serviceWorker.ready.then((registration) => {
+  registration.active.postMessage('Hi service worker');
+});
+
+navigator.serviceWorker.register('/sw.js');
+navigator.serviceWorker.ready.then((swRegistration) => swRegistration.sync.register('foo'));
