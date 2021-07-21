@@ -40,7 +40,7 @@ self.addEventListener('install', (e) => {
   console.log('install');
   e.waitUntil(
     caches.open(cacheName).then((cache) => {
-      console.log('caching app shell...');
+      console.log('caching app shell...(/)');
       return cache.addAll(filesToCache);
     }),
   );
