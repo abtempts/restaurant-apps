@@ -1,8 +1,8 @@
-import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+// import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
 const swRegister = async () => {
   if ('serviceWorker' in navigator) {
-    runtime.register();
+    // runtime.register();
     console.log('sw-register.js breakpoint1');
     // navigator.serviceWorker.register('dist/sw.js');
     console.log('sw-register.js breakpoint2');
