@@ -4,10 +4,12 @@ console.log(`global.serviceWorkerOption: ${global.serviceWorkerOption}`);
 
 const CacheHelper = {
   async cachingAppShell(requests) {
-    console.log(`cache-helper.js cachingAppShell(requests); breakpoint1: ${requests}`);
+    const newStringRequests = `dist/${requests}`;
+    console.log(`breakpoint1 cache-helper.js cachingAppShell(requests): ${requests}`);
+    console.log(`breakpoint2 cache-helper.js newStringRequests: ${newStringRequests}`);
     const cache = await this._openCache();
-    console.log(`cache-helper.js cache.addAll(requests); breakpoint2: ${requests}`);
-    cache.addAll(requests);
+    console.log('breakpoint3 cache-helper.js cache.addAll(requests);');
+    cache.addAll(newStringRequests);
     console.log('cache-helper.js cache.addAll(requests); breakpoint3');
   },
 
