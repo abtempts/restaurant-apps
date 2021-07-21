@@ -2,10 +2,11 @@ import CONFIG from '../globals/config';
 
 const CacheHelper = {
   async cachingAppShell(requests) {
+    console.log(`cache-helper.js cachingAppShell(requests); breakpoint1: ${requests}`);
     const cache = await this._openCache();
-    console.log(`cache-helper.js cache.addAll(requests); breakpoint1: ${requests}`);
+    console.log(`cache-helper.js cache.addAll(requests); breakpoint2: ${requests}`);
     cache.addAll(requests);
-    console.log('cache-helper.js cache.addAll(requests); breakpoint1');
+    console.log('cache-helper.js cache.addAll(requests); breakpoint3');
   },
 
   async deleteOldCache() {
