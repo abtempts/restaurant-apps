@@ -5,7 +5,7 @@ import '../styles/nav.css';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/App';
-// import swRegister from './utils/sw-register';
+import swRegister from './utils/sw-register';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import WebSocketInitiator from './utils/websocket-initiator';
