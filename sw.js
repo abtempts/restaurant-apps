@@ -44,7 +44,21 @@ self.addEventListener('install', (event) => {
   // menyimpan appshell ke caches API
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => caches.addAll(assetsToCache)),
+      .then((cache) => cache.addAll([
+        '/',
+        '/dist/defaultVendors~main~678f84af.bundle.js',
+        '/dist/defaultVendors~main~d939e436.bundle.js',
+        '/dist/main~29d6ecf2.bundle.js',
+        '/dist/manifest.json',
+        '/dist/icons/ico-128.png',
+        '/dist/icons/ico-256.png',
+        '/dist/icons/ico-32.png',
+        '/dist/icons/ico-48.png',
+        '/dist/icons/ico-512.png',
+        '/dist/icons/ico-64.png',
+        '/dist/icons/ico-72.png',
+        '/dist/icons/ico-96.png',
+        '/index.html'])),
   );
 });
 
