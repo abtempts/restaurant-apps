@@ -107,7 +107,7 @@ self.addEventListener('activate', function (e) {
       // `keyList` contains all cache names under your username.github.io
       // filter out ones that has this app prefix to create white list
       const cacheWhitelist = keyList.filter(function (key) {
-        return key.indexOf(APP_PREFIX);
+        return key.indexOf('restaurant-apps');
       });
       // add current cache name to white list
       cacheWhitelist.push(CACHE_NAME);
