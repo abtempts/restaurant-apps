@@ -4,7 +4,7 @@
     "description": "List of Cafe Open Now",
     "display": "standalone",
     "start_url": "./index.html",
-    "theme_color": "#a040a0",
+    "theme_color": "#022E57",
     "background_color": "#EEEEEE",
     "icons": [
       {
