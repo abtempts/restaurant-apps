@@ -26,19 +26,18 @@
 const version = '1.0.0';
 const CACHE_NAME = `restaurant-apps-${version}`;
 const assetsToCache = [
-  // '/dist/defaultVendors~main~678f84af.bundle.js',
-  // '/dist/defaultVendors~main~d939e436.bundle.js',
-  // '/dist/main~29d6ecf2.bundle.js',
-  // '/dist/manifest.json',
-
-  // '/dist/icons/ico-32.png',
-  // '/dist/icons/ico-48.png',
-  // '/dist/icons/ico-64.png',
-  // '/dist/icons/ico-72.png',
-  // '/dist/icons/ico-96.png',
-  // '/dist/icons/ico-128.png',
-  // '/dist/icons/ico-256.png',
-  // '/dist/icons/ico-512.png',
+  '/restaurant-apps/dist/defaultVendors~main~678f84af.bundle.js',
+  '/restaurant-apps/dist/defaultVendors~main~d939e436.bundle.js',
+  '/restaurant-apps/dist/main~29d6ecf2.bundle.js',
+  '/restaurant-apps/dist/manifest.json',
+  '/restaurant-apps/dist/icons/ico-32.png',
+  '/restaurant-apps/dist/icons/ico-48.png',
+  '/restaurant-apps/dist/icons/ico-64.png',
+  '/restaurant-apps/dist/icons/ico-72.png',
+  '/restaurant-apps/dist/icons/ico-96.png',
+  '/restaurant-apps/dist/icons/ico-128.png',
+  '/restaurant-apps/dist/icons/ico-256.png',
+  '/restaurant-apps/dist/icons/ico-512.png',
   '/restaurant-apps/index.html',
 ];
 
