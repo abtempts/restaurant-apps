@@ -26,6 +26,7 @@
 const version = '1.0.0';
 const CACHE_NAME = `restaurant-apps-${version}`;
 const assetsToCache = [
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
   '/restaurant-apps/dist/defaultVendors~main~678f84af.bundle.js',
   '/restaurant-apps/dist/defaultVendors~main~d939e436.bundle.js',
   '/restaurant-apps/dist/main~29d6ecf2.bundle.js',
